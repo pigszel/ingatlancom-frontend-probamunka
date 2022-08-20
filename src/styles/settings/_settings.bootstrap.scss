@@ -2,6 +2,21 @@
 // #BOOTSTRAP
 // =============================================================================
 
-// Define variable defaults
-$body-bg: #fff;
-$body-color: #111;
+// Theming
+$primary: $color-primary-light-rested;
+
+// Defaults
+$body-bg: $color-site-background_light;
+$body-color: $color-greyscale-text_primary_light;
+
+// Typography
+$h1-font-size: rem(24px);
+$text-muted: $color-greyscale-text_secondary_light;
+
+// Navigation
+$nav-link-padding-y: rem(10px);
+$nav-link-padding-x: rem(20px);
+
+$nav-pills-border-radius: rem(8px);
+$nav-pills-link-active-color: $color-primary-light-rested;
+$nav-pills-link-active-bg: $color-primary-light-button_selected;

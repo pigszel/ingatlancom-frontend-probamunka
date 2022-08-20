@@ -1,0 +1,19 @@
+// =============================================================================
+// #BOX
+// =============================================================================
+
+.box {
+  margin-bottom: rem(20px);
+  padding: rem(20px);
+  background-color: $color-white;
+  box-shadow: 0 0 rem(20px) rgba($color-primary-light-rested, 0.1);
+
+  // Modifiers
+  &--rounded {
+    border-radius: rem(16px);
+  }
+
+  &--shrink {
+    padding: rem(14px) rem(30px);
+  }
+}

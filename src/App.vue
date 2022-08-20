@@ -1,32 +1,25 @@
 <template>
-  <div id="app">
-    <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </nav>
-    <router-view />
+  <div id="app" class="d-flex flex-column justify-content-between vh-100">
+    <AppHeader />
+
+    <main class="mb-auto">
+      <router-view />
+    </main>
+
+    <AppFooter />
   </div>
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
+import AppFooter from '@/components/Layout/AppFooter.vue'
+import AppHeader from '@/components/Layout/AppHeader.vue'
 
-nav {
-  padding: 30px;
-}
+export default {
+  name: 'HomeView',
 
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
+  components: {
+    AppFooter,
+    AppHeader,
+  },
 }
-
-nav a.router-link-exact-active {
-  color: #42b983;
-}
-</style>
+</script>

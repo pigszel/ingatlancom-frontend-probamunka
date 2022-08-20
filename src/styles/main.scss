@@ -3,9 +3,20 @@
  *
  */
 
+// Tools
+@import './tools/tools.functions';
+
 // Settings
+@import 'settings/settings.colors';
 @import 'settings/settings.bootstrap';
 
 // Import Bootstrap and BootstrapVue SCSS files (order is important)
 @import '~bootstrap';
 @import '~bootstrap-vue';
+
+// Layouts
+@import 'layouts/layouts.app-footer';
+@import 'layouts/layouts.app-header';
+
+// Components
+@import 'components/components.box';
