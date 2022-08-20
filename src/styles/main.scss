@@ -1,0 +1,11 @@
+/**
+ * Main directory of styles.
+ *
+ */
+
+// Settings
+@import 'settings/settings.bootstrap';
+
+// Import Bootstrap and BootstrapVue SCSS files (order is important)
+@import '~bootstrap';
+@import '~bootstrap-vue';
