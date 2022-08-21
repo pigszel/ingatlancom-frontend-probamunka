@@ -1,0 +1,45 @@
+// =============================================================================
+// #GALLERY
+// =============================================================================
+
+$gallery-areas: (first, second, third, fourth);
+
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: rem(20px) rem(20px);
+  grid-template-areas:
+    'first second'
+    'third fourth';
+  overflow: hidden;
+  border-radius: rem(16px);
+
+  @include media-breakpoint-up(lg) {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      'first second fourth'
+      'first third fourth';
+    height: rem(300px);
+  }
+
+  &__item {
+    overflow: hidden;
+    background-color: $color-monoblue-500;
+
+    @each $name in $gallery-areas {
+      $index: index($gallery-areas, $name);
+      &:nth-child(#{$index}) {
+        grid-area: $name;
+      }
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    vertical-align: bottom;
+  }
+}

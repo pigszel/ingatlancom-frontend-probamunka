@@ -1,5 +1,5 @@
 <template>
-  <nav class="box box--rounded">
+  <nav class="box box--rounded" role="navigation">
     <ul class="nav nav-pills flex-column">
       <li class="nav-item">
         <router-link to="/" class="nav-link d-flex align-items-center"

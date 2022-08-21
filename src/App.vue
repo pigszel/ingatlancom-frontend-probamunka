@@ -13,6 +13,7 @@
 <script>
 import AppFooter from '@/components/Layout/AppFooter.vue'
 import AppHeader from '@/components/Layout/AppHeader.vue'
+import { getStorageItem } from '@/utilities/storage'
 
 export default {
   name: 'HomeView',
@@ -20,6 +21,21 @@ export default {
   components: {
     AppFooter,
     AppHeader,
+  },
+
+  mounted() {
+    this.syncFavouritesFromLocalStorage()
+  },
+
+  methods: {
+    syncFavouritesFromLocalStorage() {
+      const favourites = JSON.parse(getStorageItem({ key: 'favourites' }))
+      if (!favourites) return
+
+      favourites.forEach((item) => {
+        this.$store.dispatch('addToFavourites', { item })
+      })
+    },
   },
 }
 </script>

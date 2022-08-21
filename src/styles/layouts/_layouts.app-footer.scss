@@ -6,4 +6,9 @@
   margin-top: rem(40px);
   min-height: rem(105px);
   border-radius: 0;
+
+  // Contexts
+  .is-focus-mode-view & {
+    display: none !important;
+  }
 }

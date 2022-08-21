@@ -1,0 +1,23 @@
+// =============================================================================
+// #FAV-BUTTON
+// =============================================================================
+
+.fav-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: rem(4px);
+  width: rem(40px);
+  height: rem(40px);
+  font-size: rem(24px);
+  background-color: $color-white;
+  border: 0;
+  border-radius: rem(8px);
+  box-shadow: 0 0 rem(10px) rgba($color-primary-light-rested, 0.2);
+  color: $color-grey-battleship;
+
+  // Modifiers
+  &--filled {
+    color: $color-feedback-cheese;
+  }
+}

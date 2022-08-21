@@ -1,0 +1,57 @@
+// =============================================================================
+// #AD-LIST-ITEM
+// =============================================================================
+
+.ad-list-item {
+  $this: &;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+  &,
+  &:focus,
+  &:hover {
+    text-decoration: none;
+    color: $color-greyscale-text_primary_light;
+  }
+
+  &:focus,
+  &:hover {
+    #{$this}__title {
+      text-decoration: underline;
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    flex-direction: row;
+  }
+
+  // Elements
+  &__media {
+    height: rem(140px);
+    background-color: $color-monoblue-500;
+
+    @include media-breakpoint-up(md) {
+      flex: 0 0 rem(212px);
+      height: rem(180px);
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    vertical-align: bottom;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    padding: rem(10px) rem(20px) rem(20px);
+
+    @include media-breakpoint-up(md) {
+      flex: 1 0 auto;
+      padding: rem(20px);
+    }
+  }
+}
