@@ -11,17 +11,25 @@ const routes = [
     component: ListView,
   },
   {
+    path: '/kedvencek',
+    name: 'favourites',
+    component: () =>
+      import(
+        /* webpackChunkName: "favourites" */ '../views/FavouritesView.vue'
+      ),
+  },
+  {
     path: '/hirdetes/:adId',
     name: 'adDetails',
     component: () =>
-      import(/* webpackChunkName: "ad" */ '../views/AdDetailsView.vue'),
+      import(/* webpackChunkName: "adDetails" */ '../views/AdDetailsView.vue'),
   },
 ]
 
 const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
-  linkActiveClass: 'active',
+  linkExactActiveClass: 'active',
   routes,
 })
 
